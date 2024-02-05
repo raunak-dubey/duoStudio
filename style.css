@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PP mori;
+    color: var(--white);
+}
+body, html{
+    height: 100%;
+    width: 100%;
+}
+:root{
+    --black: #0F0D0D;
+    --white: #fafafa;
+    --assets: #edbfff;
+    --line: #dadada;
+    
+}
+#purple{
+ height: 100vh;   
+ width: 100vw;
+ top: 0;
+ position: fixed;
+ background-color: var(--assets);
+ z-index: 99;
+ opacity: 0;
+ display: none;
+}
+main{
+    background-color: var(--black);
+    cursor: none;
+}
+
+/* @ ======================= cursor ====================== */
+#cursor{
+    position: fixed;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--assets);
+    z-index: 8;
+    mix-blend-mode: difference;
+    /* transition: backgroundImage ease 0.5s; */
+    background-position: center;
+    background-size: cover;
+}
+
+/* @ ======================= heroSection ====================== */
+#heroSection{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding-top: 10vw;
+}
+header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 100;
+}
+header img{
+    height: 24px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav h4{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav h4:nth-child(1){
+    border-bottom: 1.5px solid var(--white);
+}
+#nav2 #circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--assets);
+}
+
+#heroSection h1{
+    font-size: 8vw;
+    font-weight: 300;
+    /* transform-origin: left; */
+    margin-left: 6vw;
+}
+
+#heroSection h2{
+    font-size: 8vw;
+    font-weight: 300;
+    margin-left: 24vw;
+}
+
+#heroSection video{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    margin-top: 10vw;
+    width: 60%;
+}
+/* @ ======================= aboutSection ====================== */
+#aboutSection{
+    min-height: 80vh;
+    width: 100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid var(--line);
+    position: relative;
+    z-index: 9;
+}
+#aboutSection h1{
+    font-size: 7vw;
+    font-weight: 500;
+    color: var(--black);
+}
+
+#aboutSection .container{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#aboutSection .left{
+    width: 41%;
+}
+#aboutSection .right{
+    width: 24%;
+}
+#aboutSection .left h2{
+    font-size: 4vw;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 4vw;
+}
+
+#aboutSection .right p{
+    font-size: 28px;
+    color: var(--black);
+}
+
+#aboutSection .right button{
+   width: 100%;
+   border-radius: 50px;
+   border: none;
+   padding: 10px 0;
+   background-color: var(--assets);
+   color: var(--black);
+   margin-top: 20px;
+   font-weight: 600;
+}
+
+/* @ ======================= workSection ====================== */
+#workSection{
+    min-height: 150vh;
+    width: 100%;
+    position: relative;
+    padding: 100px;
+    z-index: 9;
+    border-bottom: 2px solid var(--line);
+}
+#workSection h1{
+    font-size: 6.5vw;
+    color: var(--black);
+    font-weight: 300;
+    margin-left: 100px;
+}
+.media{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.media img{
+    height: 560px;
+    margin-top: 200px;
+}
+
+.media video{
+    height: 600px;
+    width: 600px;
+    margin-top: 60px
+}
+#workSection .more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.more h3{
+    font-size: 4vw;
+    color: var(--black);
+    font-weight: 300;
+}
+.btn{
+    color: var(--black);
+    background-color: var(--assets);
+    padding: 80px 55px;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+/* @ ======================= brandSection ====================== */
+#brandSection{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 140px 100px;
+    border-bottom: 2px solid var(--line);
+}
+#brandSection .elem{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#brandSection .elem img{
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+}
+#brandSection .elem img:nth-child(1){
+    left: 5%;
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+}
+#brandSection .elem img:nth-child(3){
+    right: 5%;
+    height: 500px;
+    width: 350px;
+    object-fit: cover;
+    
+}
+#brandSection .elem:hover img{
+    opacity: 1;
+    transform: translateY(0%) rotate(0deg);
+}
+.textDiv{
+    height: 145px;
+    overflow: hidden;
+}
+#brandSection .elem h1{
+    font-size: 7.3vw;
+    font-weight: 600;
+    transition: all ease-out 0.5s;
+}
+
+.elem:hover h1{
+    color: var(--assets);
+ transform: translateY(-100%);   
+}
+/* @ ======================= clientSection ====================== */
+#clientSection{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    padding: 140px 100px;
+}
+
+#clientSection h2{
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+#clientSection h2 span{
+    color: var(--assets);
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 20px;
+    border-top: 2px solid var(--line);
+    opacity: .5;
+}
+.box:hover{
+    opacity: 1;
+}
+.box:nth-last-child(1){
+    border-bottom: 2px solid var(--line);
+}
+/* @ ======================= footer ====================== */
+footer{
+    height: 105vh;
+    width: 100%;
+    background-color: var(--assets);
+    padding: 200px 100px;
+}
+footer #ftop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 150px 0;
+}
+#ftop h1{
+    font-size: 8vw;
+    color: var(--black);
+    font-weight: 300;
+}
+footer #ftop .btn{
+    background-color: var(--white);
+}
+#fBottom h4{
+    margin-top: 250px;
+    font-size: 1.5vw;
+    color: var(--black);
+    font-weight: 300;
+}
